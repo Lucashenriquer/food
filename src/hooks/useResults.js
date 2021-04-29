@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import yelp from "../api/yelp";
 
 export default () => {
@@ -19,9 +19,5 @@ export default () => {
       setErrorMessage("Something went wrong");
     }
   };
-  useEffect(() => {
-    searchApi("pasta");
-  }, []);
-
   return [searchApi, results, errorMessage];
 };
